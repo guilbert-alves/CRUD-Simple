@@ -22,8 +22,9 @@ public class PopulacaoInicialBanco implements CommandLineRunner {
         Pessoa p1 = new Pessoa("Joao");
         p1.setDataNacimento(LocalDate.of(1990,04,01));
         p1.setEmail("joao@gmail.com");
+        p1.setTelefone(("99605334"));
         Pessoa p2 = new Pessoa("Maria");
-        p2.setCpf("030.183.962-00");
+        p2.setCpf("03.183.962.00");
         p2.setDataNacimento(LocalDate.of(2000,12,06));
         p2.setEmail("maria@gmail.com");
 
