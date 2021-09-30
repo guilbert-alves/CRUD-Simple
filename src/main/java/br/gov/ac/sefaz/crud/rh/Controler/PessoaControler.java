@@ -54,4 +54,16 @@ public class PessoaControler {
 
     }
 
+    @GetMapping(path = "/rh/pessoas/excluir/{id}")
+    public String excluirPessoa(@PathVariable("id") long id, Model model){
+        Optional<Pessoa> pessoaOpt = pessoaRepo.findById(id);
+        if (pessoaOpt.isEmpty()){
+            throw new IllegalArgumentException("não encontrou");
+        }
+
+        pessoaRepo.delete(pessoaOpt.get());
+        return "redirect:/rh/pessoas";
+
+    }
+
 }
